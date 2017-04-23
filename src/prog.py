@@ -83,6 +83,13 @@ t, y, x = sys.output(u, t=t, x0=x0)
 
 # Plot results
 
+tinput = np.zeros(len(t)+1)
+tinput[0] = -dt
+tinput[1:] = t
+uinput = np.zeros(len(t)+1)
+uinput[1:] = u
+u[0] = 0
+plt.plot(t, u, label="Input current (A)")
 plt.plot(t, y, label="Output voltage (V)")
 plt.plot(t, x[:, 0], label="Voltage of the capacitor (V)")
 plt.plot(t, x[:, 1], label="Current of the inductor (A)")
@@ -98,7 +105,10 @@ plt.legend()
 
 plt.figure()
 
-plt.plot(x[:, 1], x[:, 0])
+plt.title("XY plot of the state variables")
+plt.plot(x[:, 0], x[:, 1])
+plt.xlabel("Voltage of the capacitor (V)")
+plt.ylabel("Current of the inductor (H)")
 
 plt.show()
 
