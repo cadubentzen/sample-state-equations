@@ -1,21 +1,23 @@
 
 # Simulação de circuito elétrico através de variáveis de estado
 
+Aluno: Carlos Eduardo Ramalho Bentzen Fonseca - 2013018875
+
 O seguinte circuito elétrico RLC será simulado:
 
-![Imagem do circuito](img/electric.png "Circuito RLC")
+![Imagem do circuito](electric.png "Circuito RLC")
 
-Com $R=3 \Omega$, $L=1\text{H}$ e $C=1/2\text{F}$, entrada da fonte de corrente $u(t)$ como um sinal degrau unitário e variáveis de estado $x_1 = v_c$ e $x_2 = i_L$
+Com R=3, L=1 e C=1/2, entrada da fonte de corrente u(t) como zero e variáveis de estado x1 = vc e x2 = iL. O estado inicial foi escolhido como (x1, x2) = (1,1)
 
 ## Diagrama de fluxo
 
 Primeiramente foi pedido para fazer um diagrama de fluxo do circuito acima. Antes do diagrama de fluxo, foi-se obtido o diagrama de blocos no domínio de Laplace para o circuito:
 
-![Diagrama de blocos](img/blockdiagram.png "Diagrama de blocos")
+![Diagrama de blocos](blockdiagram.png "Diagrama de blocos")
 
 A partir dele, podemos obter o diagrama de fluxo:
 
-![Diagrama de fluxo](img/fluxdiagram.png "Diagrama de fluxo")
+![Diagrama de fluxo](fluxdiagram.png "Diagrama de fluxo")
 
 ## Simulação
 
